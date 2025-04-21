@@ -46,10 +46,10 @@ const MentorsSection: React.FC = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F6491] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
             MEET OUR TEAM
           </h2>
-          <div className="w-24 h-1 bg-[#F5AF19] mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Learn from distinguished veterans with decades of experience in defense services and assessment. Our mentors have guided thousands of successful candidates.
           </p>
@@ -61,22 +61,22 @@ const MentorsSection: React.FC = () => {
               key={index}
               className="bg-gray-50 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl"
             >
-              <div className="relative h-64 overflow-hidden group">
+              <div className="relative h-64 overflow-hidden group bg-[#718979]">
                 <img
                   src={mentor.imageUrl} 
                   alt={mentor.name}
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-0"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F6491]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2d4b41]/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-[#0F6491]">{mentor.name}</h3>
+                  <h3 className="text-xl font-bold text-[#2d4b41]">{mentor.name}</h3>
                 </div>
                 
                 {mentor.title && (
-                  <p className="text-[#F0642D] font-medium mb-3">{mentor.title}</p>
+                  <p className="text-[#718979] font-medium mb-3">{mentor.title}</p>
                 )}
                 
                 <p className="text-gray-600 text-sm">

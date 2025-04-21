@@ -40,13 +40,13 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#eaeeed]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F6491] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
             Frequently Asked Questions
           </h2>
-          <div className="w-24 h-1 bg-[#F5AF19] mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Get answers to the most common questions about our coaching programs, methodology, and facilities.
           </p>
@@ -58,9 +58,9 @@ const FAQSection: React.FC = () => {
               <button
                 className={`flex justify-between items-center w-full p-5 font-medium text-left rounded-t-lg ${
                   openIndex === index 
-                    ? "bg-[#0F6491] text-white" 
-                    : "bg-white text-[#0F6491] hover:bg-[#239BD7] hover:text-white"
-                } border border-[#239BD7] transition-colors duration-300`}
+                    ? "bg-[#2d4b41] text-white" 
+                    : "bg-white text-[#2d4b41] hover:bg-[#718979] hover:text-white"
+                } border border-[#718979] transition-colors duration-300`}
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="flex-1">{faq.question}</span>
@@ -92,7 +92,7 @@ const FAQSection: React.FC = () => {
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center py-3 px-6 bg-[#F0642D] hover:bg-[#F5AF19] text-white font-bold rounded-md transition-colors duration-300"
+            className="inline-flex items-center py-3 px-6 bg-[#2d4b41] hover:bg-[#718979] text-white font-bold rounded-md transition-colors duration-300"
           >
             Contact Us
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">

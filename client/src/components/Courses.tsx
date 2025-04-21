@@ -79,13 +79,13 @@ const courseData: CourseData[] = [
 
 const Courses: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#eaeeed]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0F6491] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
             Our Premier Courses
           </h2>
-          <div className="w-24 h-1 bg-[#F5AF19] mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
           <p className="text-gray-700 max-w-3xl mx-auto">
             Exceptional training programs designed by experts to ensure your success in defense examinations and interviews.
           </p>
@@ -97,19 +97,19 @@ const Courses: React.FC = () => {
               key={index} 
               className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105"
             >
-              <div className="relative h-48">
+              <div className="relative h-48 bg-[#718979]">
                 <img 
                   src={course.imageUrl} 
                   alt={course.imageAlt}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full opacity-0 "
                 />
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0F6491] mb-2">{course.title}</h3>
+                <h3 className="text-xl font-bold text-[#2d4b41] mb-2">{course.title}</h3>
                 <p className="text-gray-600 mb-4 text-sm h-16">{course.description}</p>
                 <a href={course.ctaLink}>
-                  <span className="inline-block w-full text-center py-2 px-4 bg-[#239BD7] hover:bg-[#0F6491] text-white font-semibold rounded-md transition-colors duration-300">
+                  <span className="inline-block w-full text-center py-2 px-4 bg-[#2d4b41] hover:bg-[#718979] text-white font-semibold rounded-md transition-colors duration-300">
                     {course.ctaText}
                   </span>
                 </a>

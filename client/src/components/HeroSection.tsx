@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Coaching Text */}
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0F6491]">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#2d4b41]">
               Transform Your Life with Expert Coaching
             </h1>
             <p className="text-lg text-gray-600">
@@ -36,26 +36,26 @@ const HeroSection = () => {
             </p>
             <ul className="space-y-3">
               <li className="flex items-center">
-                <span className="text-[#F5AF19] mr-2">✓</span>
+                <span className="text-[#718979] mr-2">✓</span>
                 Personalized coaching sessions
               </li>
               <li className="flex items-center">
-                <span className="text-[#F5AF19] mr-2">✓</span>
+                <span className="text-[#718979] mr-2">✓</span>
                 Expert guidance and support
               </li>
               <li className="flex items-center">
-                <span className="text-[#F5AF19] mr-2">✓</span>
+                <span className="text-[#718979] mr-2">✓</span>
                 Proven success strategies
               </li>
             </ul>
-            <button className="bg-[#0F6491] text-white py-3 px-6 rounded-lg hover:bg-[#239BD7] transition duration-300">
+            <button className="bg-[#2d4b41] text-white py-3 px-6 rounded-lg hover:bg-[#718979] transition duration-300">
               Learn More
             </button>
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-[#0F6491] mb-6">Get Started Today</h2>
+          <div className="bg-[#eaeeed] p-8 rounded-lg shadow-lg">
+            <h2 className="text-2xl font-bold text-[#2d4b41] mb-6">Get Started Today</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -67,7 +67,7 @@ const HeroSection = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#239BD7] focus:ring-[#239BD7]"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2d4b41] focus:ring-[#2d4b41]"
                   required
                 />
               </div>
@@ -81,7 +81,7 @@ const HeroSection = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#239BD7] focus:ring-[#239BD7]"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2d4b41] focus:ring-[#2d4b41]"
                   required
                 />
               </div>
@@ -95,7 +95,7 @@ const HeroSection = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#239BD7] focus:ring-[#239BD7]"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2d4b41] focus:ring-[#2d4b41]"
                   required
                 />
               </div>
@@ -109,13 +109,13 @@ const HeroSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#239BD7] focus:ring-[#239BD7]"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2d4b41] focus:ring-[#2d4b41]"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#0F6491] text-white py-3 px-4 rounded-md hover:bg-[#239BD7] transition duration-300"
+                className="w-full bg-[#2d4b41] text-white py-3 px-4 rounded-md hover:bg-[#718979] transition duration-300"
               >
                 Submit
               </button>

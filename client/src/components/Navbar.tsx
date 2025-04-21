@@ -32,13 +32,13 @@ const Navbar = () => {
             <a
               key={index}
               href={link.href}
-              className="relative group text-[#0F6491] font-medium hover:text-[#F0642D] transition-colors duration-200"
+              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F5AF19] group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
             </a>
           ))}
-          <button className="bg-[#0F6491] hover:bg-[#239BD7] text-white font-semibold px-6 py-2 rounded-full transition-colors duration-200">
+          <button className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-6 py-2 rounded-full transition-colors duration-200">
             Get Started
           </button>
         </div>
