@@ -1,4 +1,4 @@
-import partnership1 from "../assets/partnership/partnership1.png"
+import partnership1 from "../assets/partnership/partnership2.png"
 import podcast from "../assets/partnership/podcaster collab.jpg"
 import React from 'react'
 
@@ -14,7 +14,7 @@ const Partnership = () => {
 
           {/* Disha Kiran Partnership */}
           <div className="mb-16">
-            <p className="text-gray-700 max-w-3xl mx-auto mb-6">
+            <p className="text-gray-700 max-w-3xl mx-auto mb-12">
               Disha Kiran's NEP 2020-compliant assessments, which are
               scientifically accredited to ensure a high degree of accuracy, reliability,
               and validity. These assessments, tailored to the Indian context by a
@@ -24,8 +24,13 @@ const Partnership = () => {
               Disha Kiran is one of the leading platforms in India.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+              <div>
+              <h3 className="text-xl font-semibold text-[#2d4b41] mb-2 text-center">
+                INVINCIO SERVICES LLP X DISHA KIRAN
+              </h3>
               <img src={partnership1} alt="Disha Kiran Partnership" className="w-full rounded-lg shadow-lg" />
+              </div>
               <div className="flex flex-col justify-center space-y-4 text-left">
                 <h3 className="text-2xl font-semibold text-[#2d4b41] mb-4">Key Features</h3>
                 <ul className="space-y-3 text-gray-700">
@@ -60,7 +65,7 @@ const Partnership = () => {
           </div>
 
           {/* Podcast Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-[#fff] rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold text-[#2d4b41] mb-6">Featured Podcast</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-w-9 aspect-h-16">

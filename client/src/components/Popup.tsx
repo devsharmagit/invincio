@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import imageSrc from "../assets/recomendeds/image2.png"
+import imageSrc from "../assets/recomendeds/image.jpg"
 
 const Popup = () => {
   const [isOpen, setIsOpen] = useState(true);

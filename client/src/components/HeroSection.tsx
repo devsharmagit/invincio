@@ -23,7 +23,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="w-full bg-white py-16">
+    <div className="w-full bg-[#eaeeed] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Contact Text */}
@@ -51,7 +51,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-[#eaeeed] p-8 rounded-lg shadow-lg">
+          <div className="bg-[#fff]/10 p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold text-[#2d4b41] mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

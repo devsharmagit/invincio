@@ -4,6 +4,7 @@ import career from "../assets/whychooseinvincio/career.png";
 import hybrid from "../assets/whychooseinvincio/hybrid.png";
 import realworld from "../assets/whychooseinvincio/image.png";
 import mentorship from "../assets/whychooseinvincio/image2.png";
+import aiimage from "../assets/whychooseinvincio/ai-image.jpg"
 
 const WhySection = () => {
   return (
@@ -109,6 +110,25 @@ const WhySection = () => {
               </h3>
               <p className="text-gray-600 mb-4 text-sm  ">
                 Enabling Valuable Connections and Learning from the Best
+              </p>
+            </div>
+          </div>
+           {/* ########## */}
+           <div className="bg-white max-w-md rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105">
+            <div className="relative h-48 ">
+              <img
+                src={aiimage}
+                alt={aiimage}
+                className="object-cover w-full h-full "
+              />
+            </div>
+
+            <div className="p-6">
+              <h3 className="text-xl font-bold text-[#2d4b41] mb-2">
+              AI Psychometric & Military-Inspired Candidate Evaluation
+              </h3>
+              <p className="text-gray-600 mb-4 text-sm  ">
+              A unique blend of AI-driven psychometric assessments and military-style training to provide a holistic understanding of candidates' potential.
               </p>
             </div>
           </div>
