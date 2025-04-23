@@ -1,12 +1,12 @@
 import './App.css'
-import Courses from './components/Courses'
-import Description from './components/Description'
-import FAQSection from './components/FAQsection'
 import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
 import Mentors from './components/Mentors'
 import Navbar from './components/Navbar'
-import Slider from './components/Slider'
+import OurDifferentiators from './components/OurDifferentiators'
+import Partnership from './components/Partnership'
+import Projects from './components/Projects'
+// import Slider from './components/Slider'
+import WhySection from './components/WhySection'
 
 function App() {
 
@@ -15,12 +15,16 @@ function App() {
     <div className="poppins">
 
       <Navbar />
-      <Slider />
-      <HeroSection />
-      <Courses />
+      {/* <Slider /> */}
+      <WhySection />
+      <OurDifferentiators />
       <Mentors />
-      <Description />
-      <FAQSection />
+      <Partnership />
+    <Projects />
+      {/* <HeroSection /> */}
+      {/* <Courses /> */}
+      {/* <Description /> */}
+      {/* <FAQSection /> */}
       <Footer />
     </div>
   </>
