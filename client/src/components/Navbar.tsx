@@ -23,11 +23,16 @@ const Navbar = () => {
   return (
     <div className="w-full bg-white shadow-md">
       <div className="h-20 max-w-7xl mx-auto flex justify-between items-center px-4">
-        <div className="flex items-center flex-col gap-1 h-20">
-          <img src={logoSrc} alt="Logo" className="h-14 w-auto" />
-          <p className="text-sm font-medium ">
-          #L2L2L(learn to live to learn)
-          </p>
+        <div className="flex items-center gap-3">
+          <img src={logoSrc} alt="Logo" className="h-20 w-auto" />
+          <div className="flex flex-col">
+            <p className="text-sm font-bold text-[#2d4b41] tracking-wide">
+              #L2L2L
+            </p>
+            <p className="text-xs text-[#718979] italic">
+              learn to live to learn
+            </p>
+          </div>
         </div>
         
         <div className="flex gap-6 items-center">

@@ -26,36 +26,33 @@ const HeroSection = () => {
     <div className="w-full bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Coaching Text */}
+          {/* Left Side - Contact Text */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-[#2d4b41]">
-              Transform Your Life with Expert Coaching
+              Get in Touch with Us
             </h1>
             <p className="text-lg text-gray-600">
-              Join our coaching program and unlock your full potential. Our experienced coaches will guide you through a personalized journey of growth and success.
+              Have questions or need assistance? Our team is here to help. Fill out the form and we'll get back to you as soon as possible.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center">
                 <span className="text-[#718979] mr-2">✓</span>
-                Personalized coaching sessions
+                Quick response time
               </li>
               <li className="flex items-center">
                 <span className="text-[#718979] mr-2">✓</span>
-                Expert guidance and support
+                Professional support
               </li>
               <li className="flex items-center">
                 <span className="text-[#718979] mr-2">✓</span>
-                Proven success strategies
+                Personalized assistance
               </li>
             </ul>
-            <button className="bg-[#2d4b41] text-white py-3 px-6 rounded-lg hover:bg-[#718979] transition duration-300">
-              Learn More
-            </button>
           </div>
 
           {/* Right Side - Contact Form */}
           <div className="bg-[#eaeeed] p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-[#2d4b41] mb-6">Get Started Today</h2>
+            <h2 className="text-2xl font-bold text-[#2d4b41] mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">

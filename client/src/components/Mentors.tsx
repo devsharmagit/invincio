@@ -11,7 +11,6 @@ import havilRajest from "../assets/mentor/havildarRajseh.png";
 import pratishta from "../assets/mentor/pratishta.png";
 import radhika from "../assets/mentor/radhika.png";
 import hina from "../assets/mentor/hina.png";
-import rajinder from "../assets/mentor/rajindersokhi.png";
 import vinod from "../assets/mentor/vinod.png"
 import pooja from "../assets/mentor/pooja.png"
 import hema from "../assets/mentor/hema.png"
@@ -221,38 +220,7 @@ const MentorsSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mb-12 mt-32">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
-            VISITING FACULTY
-          </h2>
-          <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
-        </div>
-
-        <div className="flex justify-center mt-10 max-w-6xl mx-auto">
-          <div className="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl flex flex-col items-center px-6 py-8 w-full md:w-[22rem]">
-            <div className="w-48 h-48 mb-6 rounded-full overflow-hidden border-4 border-[#eaeeed]">
-              <img
-                src={rajinder}
-                alt={"Rajinder Sokhi"}
-                className="object-cover object-top w-full h-full"
-              />
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-[#2d4b41] mb-3">
-                Dr Rajinder Sokhi
-              </h3>
-
-              <p className="text-gray-600 text-sm">
-                Dr. Rajinder K. Sokhi, a defence psychologist with 34+ years of
-                expertise, specializes in work values, group dynamics, and
-                performance appraisals. An award-winning researcher, has
-                authored 28 publications and developed training programs for the
-                Armed Forces.
-              </p>
-            </div>
-          </div>
-        </div>
+       
 
         <div className="text-center mb-12 mt-32">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
