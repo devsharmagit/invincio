@@ -73,25 +73,32 @@ const OurDifferentiators: React.FC = () => {
         </div>
         <div className="max-w-3xl flex justify-center items-center mx-auto gap-5 mb-5">
           <div className="w-1/2 flex justify-center flex-col items-center gap-2">
-            <img src={sunny} alt="" className="w-full rounded-lg max-w-[300px]" />
-            <h2 className="text-xl font-bold text-[#2d4b41]">
-            CA Sunny Sabharwal
-            </h2>
-          </div>
-          <div className="w-1/2">
-            <p className="text-gray-600 font-medium text-lg">
-            Chartered Accountant and Financial Literacy
-Trainer with 18 years of experience in banking,
-risk management, and financial consulting.
-Conducted international training programs
-across Asia, including the Philippines and Nepal.
-Specializes in bridging theory with real-world
-applications through interactive learning and
-case studies. Passionate about equipping
-professionals with financial acumen for better
-decision-making and long-term success.
-            </p>
-          </div>
+          <div
+          
+              className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl flex flex-row items-center px-6 py-8 w-full md:w-[35rem] gap-8`}
+            >
+              <div
+                className='w-64 h-64 rounded-lg overflow-hidden'
+              >
+                <img
+                  src={sunny}
+                  alt={sunny}
+                  className="object-cover object-top w-full h-full"
+                />
+              </div>
+
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-[#2d4b41] mb-3">
+                CA Sunny Sabharwal
+                </h3>
+
+
+                <p className="text-gray-600 text-sm">
+                Chartered Accountant and Financial Literacy Trainer with 18 years of experience in banking, risk management, and financial consulting. Conducted international training programs across Asia, including the Philippines and Nepal. Specializes in bridging theory with real-world applications through interactive learning and case studies. Passionate about equipping professionals with financial acumen for better decision-making and long-term success.
+                </p>
+              </div>
+            </div>
+            </div>
         </div>
         <div className="max-w-5xl mx-auto text-center mt-20 mb-20">
           <h2 className="text-3xl font-bold text-[#2d4b41] text-center">

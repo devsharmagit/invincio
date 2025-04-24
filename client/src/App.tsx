@@ -27,9 +27,9 @@ function App() {
       <Services />
       <OurDifferentiators />
       <OurOfferings />
-      <Mentors />
       <Partnership />
       <Projects />
+      <Mentors />
       <Recomendes />
       <HeroSection />
       <WhySection />

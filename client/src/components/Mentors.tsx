@@ -14,6 +14,7 @@ import hina from "../assets/mentor/hina.png";
 import vinod from "../assets/mentor/vinod.png"
 import pooja from "../assets/mentor/pooja.png"
 import hema from "../assets/mentor/hema.png"
+import tanugola from "../assets/mentor/tanugola.jpeg"
 
 
 interface MentorData {
@@ -89,6 +90,12 @@ const mentorData: MentorData[] = [
     description:
       "Hina Arora, Engineering Manager & Career Coach, has helped 500+ students secure jobs, optimized 1,000+ LinkedIn profiles, and built a 300K+ social media following. She specializes in ATS resumes and interview success.",
     imageUrl: hina,
+  },
+  {
+    name: "Tanu Gola",
+    description:
+      "Motivated Economics undergrad at LSR College with interests in consulting and decision-making. Junior Consultant at LSR Consulting Club, active in WICCI, skilled in Canva, event coordination, and driven by creative, impactful problem-solving.",
+    imageUrl: tanugola,
   },
 ];
 

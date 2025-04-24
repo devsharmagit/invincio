@@ -4,7 +4,7 @@ import React from 'react'
 
 const Partnership = () => {
   return (
-    <section className="py-16 bg-[#eaeeed]">
+    <section className="py-16 bg-[#fff]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
@@ -65,7 +65,7 @@ const Partnership = () => {
           </div>
 
           {/* Podcast Section */}
-          <div className="bg-[#fff] rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+          <div className="bg-[#eaeeed] rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold text-[#2d4b41] mb-6">Featured Podcast</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-w-9 aspect-h-16">
