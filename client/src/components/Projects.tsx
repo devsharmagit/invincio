@@ -15,7 +15,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-const Projects = () => {
+const Projects: React.FC<{ id?: string }> = ({ id }) => {
   const projectData = [
     {
       title: "First Project at YODDHAA Defence Institue, Pune",
@@ -40,7 +40,7 @@ const Projects = () => {
   ]
 
   return (
-    <section className="py-16 bg-[#eaeeed]/90" id="projects">
+    <section id={id} className="py-32 bg-[#eaeeed]/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
@@ -84,7 +84,7 @@ const Projects = () => {
               </div>
 
               {/* Content Section */}
-              <div className="w-full md:w-1/2 p-6 bg-[#f8f9fa] rounded-lg shadow-md transform transition-transform hover:scale-105">
+              <div className="text-center md:text-left w-full md:w-1/2 p-6 bg-[#f8f9fa] rounded-lg shadow-md transform transition-transform hover:scale-105">
                 <h3 className="text-2xl font-semibold text-[#2d4b41] mb-4">
                   {project.title}
                 </h3>

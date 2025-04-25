@@ -216,7 +216,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
-    <div className="w-full">
+    <div className="w-full" id='services'>
       <div className="bg-white rounded-xl shadow-lg p-8 py-12">
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">{service.title}</h2>
@@ -273,11 +273,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         {service.title === "SSB INTERVIEW TRAINING" && (
             <div className="mb-8 mt-12">
               <p className="text-3xl font-bold text-[#2d4b41] mb-8 text-center">We provide offline and online classes</p>
-              <div className="flex justify-center gap-8">
-                <div className="h-60 w-full max-w-[450px] object-center object-cover rounded-lg overflow-hidden">
+              <div className="flex flex-col md:flex-row justify-center gap-8">
+                <div className="h-60 w-full max-w-[450px] object-center object-cover rounded-lg overflow-hidden mx-auto text-center">
                   <img src={offlineClasses} alt="Offline Classes" className="w-full h-full object-cover" />
                 </div>
-                <div className="h-60 w-full max-w-[450px] object-center object-cover rounded-lg overflow-hidden">
+                <div className="h-60 w-full max-w-[450px] object-center object-cover rounded-lg overflow-hidden mx-auto text-center">
                   <img src={onlineClasses} alt="Online Classes" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -285,18 +285,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           )}
 
         <div className="mt-12 text-center">
-          <button className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+          <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
             {service.cta}
-          </button>
+          </a>
         </div>
       </div>
     </div>
   );
 };
 
-const Services: React.FC = () => {
+const Services: React.FC<{ id?: string }> = ({ id }) => {
   return (
-    <section className="py-32 bg-[#eaeeed]/90">
+    <section id={id} className="py-32 bg-[#eaeeed]/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">

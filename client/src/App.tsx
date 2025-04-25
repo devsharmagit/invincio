@@ -28,12 +28,12 @@ function App() {
       <Tagline />
       <SecondSection />
       <MissionVission />
-      <Services />
+      <Services id="services" />
       {/* <OurDifferentiators /> */}
       {/* <OurOfferings /> */}
       <Partnership />
-      <Projects />
-      <Mentors />
+      <Projects id="projects" />
+      <Mentors id="mentors" />
       <Recomendes />
       <HeroSection />
       <WhySection />

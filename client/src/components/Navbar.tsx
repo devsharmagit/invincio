@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 import logoSrc from "../assets/logo.png";
 
 const links = [
@@ -6,22 +8,36 @@ const links = [
     href: "/",
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Services",
+    href: "#services",
   },
   {
-    name: "Courses",
-    href: "/courses",
+    name: "Mentors",
+    href: "#mentors",
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "Projects",
+    href: "#projects",
   }
 ];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsOpen(false);
+      }
+    }
+  };
+
   return (
-    <div className="w-full bg-white/90 shadow-md">
+    <div className="w-full bg-white/90 shadow-md relative z-50">
       <div className="h-20 max-w-7xl mx-auto flex justify-between items-center px-4">
         <div className="flex items-center gap-3">
           <img src={logoSrc} alt="Logo" className="h-20 w-auto" />
@@ -35,20 +51,70 @@ const Navbar = () => {
           </div>
         </div>
         
-        <div className="flex gap-6 items-center">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex gap-6 items-center">
           {links.map((link, index) => (
             <a
               key={index}
               href={link.href}
+              onClick={handleClick}
               className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
             </a>
           ))}
-          <button className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-6 py-2 rounded-full transition-colors duration-200">
+            <a
+              href={"https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link"}
+              target="_blank"
+              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200"
+            >
+         Brochure
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          <a href="https://forms.gle/jcUHXwXKafQp5ChS9" target="_blank" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-6 py-2 rounded-full transition-colors duration-200">
             Get Started
-          </button>
+          </a>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-[#2d4b41] p-2"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div
+        className={`lg:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
+        <div className="flex flex-col items-center py-4 space-y-4">
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              onClick={handleClick}
+              className="text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200"
+            >
+              {link.name}
+            </a>
+          ))}
+           <a
+              href={"https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link"}
+              target="_blank"
+              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200"
+            >
+         Brochure
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
+            </a>
+          <a href="https://forms.gle/jcUHXwXKafQp5ChS9" target="_blank" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-6 py-2 rounded-full transition-colors duration-200">
+            Get Started
+          </a>
         </div>
       </div>
     </div>

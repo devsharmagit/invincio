@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Copyright Text */}
-          <div className="text-sm text-gray-300">
+          <div className="text-sm hidden md:block text-gray-300">
             © 2025 Invincio Services. All Rights Reserved.
           </div>
 
@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
           <div className="flex space-x-2">
             {/* Download Brochure Button */}
             <a 
-              href="/brochure.pdf" 
-              download
+              href="https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link" 
+              target='_blank'
               className="flex items-center space-x-1 bg-[#718979] hover:bg-[#5a6d5a] text-white px-2 py-1 rounded text-sm transition-colors"
             >
               <FaDownload className="w-3 h-3" />
@@ -53,7 +53,8 @@ const Footer: React.FC = () => {
 
             {/* Contact Button */}
             <a 
-              href="mailto:info@invincioservices.com" 
+              href="https://forms.gle/jcUHXwXKafQp5ChS9" 
+              target='_blank'
               className="flex items-center space-x-1 bg-[#718979] hover:bg-[#5a6d5a] text-white px-2 py-1 rounded text-sm transition-colors"
             >
               <FaEnvelope className="w-3 h-3" />
@@ -61,6 +62,9 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
+        <div className="text-xs block md:hidden  text-gray-300 pt-1 text-center ">
+            © 2025 Invincio Services. All Rights Reserved.
+          </div>
       </div>
     </footer>
   );

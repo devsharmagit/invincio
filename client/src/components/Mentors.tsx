@@ -129,9 +129,9 @@ sustainability-driven growth. `,
   },
 ];
 
-const MentorsSection: React.FC = () => {
+const Mentors: React.FC<{ id?: string }> = ({ id }) => {
   return (
-    <section className="py-16 bg-white/90">
+    <section id={id} className="py-32 bg-[#eaeeed]/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
@@ -146,7 +146,7 @@ const MentorsSection: React.FC = () => {
               key={index}
               className={`bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl ${
                 index < 6
-                  ? "flex flex-row items-center px-6 py-8 w-full md:w-[35rem] gap-8"
+                  ? "flex flex-col md:flex-row items-center px-6 py-8 w-full md:w-[35rem] gap-8"
                   : "flex flex-col items-center px-6 py-8 w-full md:w-[22rem]"
               }`}
             >
@@ -164,7 +164,7 @@ const MentorsSection: React.FC = () => {
                 />
               </div>
 
-              <div className={`${index < 6 ? "flex-1" : "text-center"}`}>
+              <div className={`${index < 6 ? "flex-1 text-center md:text-left" : "text-center"}`}>
                 <h3 className="text-xl font-bold text-[#2d4b41] mb-3">
                   {mentor.name}
                 </h3>
@@ -222,4 +222,4 @@ const MentorsSection: React.FC = () => {
   );
 };
 
-export default MentorsSection;
+export default Mentors;

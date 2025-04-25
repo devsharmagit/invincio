@@ -19,11 +19,11 @@ const HeroSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log(formData);
+   window.open( "https://forms.gle/jcUHXwXKafQp5ChS9")
   };
 
   return (
-    <div className="w-full bg-[#eaeeed]/90 py-16">
+    <div className="w-full bg-[#eaeeed]/90 py-16" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Contact Text */}

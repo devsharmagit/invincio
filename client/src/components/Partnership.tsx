@@ -65,17 +65,17 @@ const Partnership = () => {
           </div>
 
           {/* Podcast Section */}
-          <div className="bg-[#eaeeed] rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-[#2d4b41] mb-6">Featured Podcast</h3>
+          <div className="bg-[#eaeeed] rounded-xl shadow-lg p-8 max-w-4xl mx-auto text-center md:text-left">
+            <h3 className="text-3xl font-bold text-[#2d4b41] mb-6 ">Featured Podcast</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-w-9 aspect-h-16">
                 <img 
                   src={podcast} 
                   alt="Infinite Talk Podcast" 
-                  className="rounded-lg shadow-md object-cover h-[400px] w-full"
+                  className="rounded-lg shadow-md object-cover h-[500px] w-full object-center"
                 />
               </div>
-              <div className="text-left">
+              <div className="text-center md:text-left">
                 <h4 className="text-2xl font-semibold mb-4">Infinite Talk Collaboration</h4>
                 <p className="text-xl font-semibold text-gray-700 mb-6">
                   Join us in our engaging discussion on the Infinite Talk podcast where we explore
