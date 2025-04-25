@@ -135,62 +135,6 @@ const MentorsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
-            MEET OUR LEADER
-          </h2>
-          <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
-        </div>
-        <div className="max-w-3xl flex justify-center items-center mx-auto gap-5 mb-5">
-          <div className="w-1/2 flex justify-center flex-col items-center gap-2">
-            <img src={LeaderImage} alt="" className="w-full rounded-lg" />
-            <h2 className="text-xl font-bold text-[#2d4b41]">
-              Lt Col Ankur Sabharwal
-            </h2>
-          </div>
-          <div className="w-1/2">
-            <p className="text-gray-600 font-medium text-lg">
-              Our team leader is a seasoned Personality Assessor & Behavioral
-              Analyst with deep expertise in psychological assessments,
-              competency profiling, and leadership evaluation. With a
-              distinguished background in military leadership and human
-              intelligence operations, he has successfully developed talent
-              strategies aligned with organizational goals, fostering success
-              through resilience and behavioral adaptability.
-            </p>
-          </div>
-        </div>
-        <div className="max-w-5xl mx-auto text-center mt-32 mb-32">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] text-center">
-            Professional Experiences:
-          </h2>
-          <ul className="grid grid-cols-2 gap-4 text-left mt-4 list-none">
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              10 years of experience of mentoring candidates
-            </li>
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              Providing best in country training with unique curriculum
-              including sessions on communication skills, leadership and other
-              relevant aspects of SSB assessment criteria
-            </li>
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              Training on Authentic and realistic GTO structures
-            </li>
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              21+ years of experience in military leadership, behavioral
-              psychology & corporate expansion
-            </li>
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              Unmatched exposure at SSBs and mentoring assessors at DIPR - 300+
-              singular recommendations
-            </li>
-            <li className="bg-[#eaeeed] list-none p-4 text-lg font-semibold rounded-lg">
-              Ensuring no one left behind hence tie ups in North and West India,
-              more in pipeline
-            </li>
-          </ul>
-        </div>
-
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
             MEET OUR TEAM
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
