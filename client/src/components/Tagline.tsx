@@ -64,9 +64,9 @@ const Tagline = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <a href='#services' onClick={handleClick} className="px-8 py-4 bg-white text-[#2d4b41] font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg">
-              Explore Our Pedagogy
+              Explore Our Services
             </a>
-            <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
+            <a href='#contact' onClick={handleClick}  className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
               Talk to Us
             </a>
           </div>

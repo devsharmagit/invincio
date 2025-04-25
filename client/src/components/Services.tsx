@@ -284,6 +284,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           )}
 
         <div className="mt-12 text-center">
+          {service.title === "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)" && 
+           <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSe-Oo1icYKLPNlitYoHo9B_BRyZzkLHHv4lcpirn-_WUqwIaw/viewform?usp=sharing' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+           {service.cta}
+         </a>
+          }
           <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
             {service.cta}
           </a>
