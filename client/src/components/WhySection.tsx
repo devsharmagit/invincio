@@ -1,4 +1,4 @@
-import React from "react";
+
 import millitary from "../assets/whychooseinvincio/millitary.png";
 import career from "../assets/whychooseinvincio/career.png";
 import hybrid from "../assets/whychooseinvincio/hybrid.png";

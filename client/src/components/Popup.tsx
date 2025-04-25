@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import imageSrc from "../assets/recomendeds/image.jpg"
 
 const Popup = () => {

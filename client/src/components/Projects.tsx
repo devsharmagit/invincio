@@ -12,8 +12,6 @@ import katurpula4 from "../assets/projects/katurpula/katurpula4.webp"
 import katurpula5 from "../assets/projects/katurpula/katurpula5.webp"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
 
 const Projects: React.FC<{ id?: string }> = ({ id }) => {
   const projectData = [

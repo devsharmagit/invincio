@@ -1,8 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import { FaChartLine, FaUserTie, FaBalanceScale, FaRoad, FaChartBar, FaLaptop, FaBriefcase, FaTrophy, FaUsers, FaGlobe, FaBrain, FaHandshake, FaHeart, FaMapMarkedAlt, FaGraduationCap, FaBuilding, FaUserCheck, FaFemale, FaLanguage } from 'react-icons/fa'
+import { FaChartLine, FaUserTie, FaRoad, FaChartBar, FaLaptop, FaBriefcase, FaTrophy, FaUsers, FaGlobe, FaBrain, FaHandshake, FaHeart, FaMapMarkedAlt, FaGraduationCap, FaBuilding, FaUserCheck, FaFemale, FaLanguage } from 'react-icons/fa'
 import offlineClasses from "../assets/projects/pune/pune-project-3.jpg";
 import onlineClasses from "../assets/onlineClasses.jpg"
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const StickySocail = () => {

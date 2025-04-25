@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
 import hero1 from "../assets/projects/katurpula/katurpula5.webp";
 import hero2 from "../assets/projects/pune/punr-project-2.jpg";
 import hero3 from "../assets/projects/pune/pune-project-4.jpg";

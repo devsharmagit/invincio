@@ -1,5 +1,4 @@
 import React from "react";
-import LeaderImage from "../assets/mentor/leader.png";
 import BrigAjaySharma from "../assets/mentor/Brig Sharma.jpg";
 import ColSuden from "../assets/mentor/Col Suden.jpg";
 import ColRanjit from "../assets/mentor/RANJIT.jpg";

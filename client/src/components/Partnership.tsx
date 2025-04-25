@@ -1,6 +1,5 @@
 import partnership1 from "../assets/partnership/partnership2.png"
 import podcast from "../assets/partnership/podcaster collab.jpg"
-import React from 'react'
 
 const Partnership = () => {
   return (
