@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import hero1 from "../assets/projects/katurpula/katurpula5.webp";
@@ -10,16 +10,16 @@ import hero5 from "../assets/herosection/bgimage2.jpeg";
 const Tagline = () => {
   const images = [hero1, hero2, hero3, hero4, hero5];
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const href = e.currentTarget.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+  // const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   const href = e.currentTarget.getAttribute('href');
+  //   if (href && href.startsWith('#')) {
+  //     const element = document.querySelector(href);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: 'smooth' });
+  //     }
+  //   }
+  // };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -62,14 +62,14 @@ const Tagline = () => {
             The Invincio Way.
           </h1>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <a href='#services' onClick={handleClick} className="px-8 py-4 bg-white text-[#2d4b41] font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg">
               Explore Our Services
             </a>
             <a href='#contact' onClick={handleClick}  className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200">
               Talk to Us
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

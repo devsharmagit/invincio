@@ -1,8 +1,20 @@
-import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
+import { useState, useRef, useEffect } from "react";
+import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import logoSrc from "../assets/logo.png";
 
-const links = [
+interface DropdownItem {
+  name: string;
+  href: string;
+  external?: boolean;
+}
+
+interface NavLink {
+  name: string;
+  href: string;
+  dropdown?: DropdownItem[];
+}
+
+const links: NavLink[] = [
   {
     name: "Home",
     href: "/",
@@ -10,6 +22,24 @@ const links = [
   {
     name: "Services",
     href: "#services",
+    dropdown: [
+      {
+        name: "SSB INTERVIEW TRAINING",
+        href: "#services"
+      },
+      {
+        name: "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)",
+        href: "#services"
+      },
+      {
+        name: "CORPORATE TRAINING",
+        href: "#services"
+      },
+      {
+        name: "SKILL DEVELOPMENT PROJECTS",
+        href: "#services"
+      }
+    ]
   },
   {
     name: "Mentors",
@@ -18,13 +48,54 @@ const links = [
   {
     name: "Projects",
     href: "#projects",
+  },
+  {
+    name: "Brochure",
+    href: "#",
+    dropdown: [
+      {
+        name: "SSB ONLINE",
+        href: "https://drive.google.com/file/d/13mILyWMvaH9NgMVVhfqipdcfC4U-Sy1v/view?usp=drive_link",
+        external: true
+      },
+      {
+        name: "SSB OFFLINE",
+        href: "https://drive.google.com/file/d/1HwRt-B-tapGd0QBBSPSqQhzfWMCRUs4v/view?usp=drive_link",
+        external: true
+      },
+      {
+        name: "SCHOOLS",
+        href: "https://drive.google.com/file/d/1-lupK053cfP2IIDao9QDpCvejJimffbG/view?usp=sharing",
+        external: true
+      }
+    ]
   }
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const dropdownRefs = useRef<Array<HTMLDivElement | null>>([]);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (activeDropdown !== null && 
+          dropdownRefs.current[activeDropdown] && 
+          !dropdownRefs.current[activeDropdown]?.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [activeDropdown]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, external?: boolean) => {
+    if (external) return; // Don't prevent default for external links
+    
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
     if (href && href.startsWith('#')) {
@@ -32,8 +103,14 @@ const Navbar = () => {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
         setIsOpen(false);
+        setActiveDropdown(null);
       }
     }
+  };
+
+  const toggleDropdown = (index: number, e: React.MouseEvent) => {
+    e.preventDefault();
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   return (
@@ -54,25 +131,52 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-8 items-center">
           {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              onClick={handleClick}
-              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
+            <div 
+              key={index} 
+              className="relative" 
+              ref={el => { dropdownRefs.current[index] = el; }}
             >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
-            </a>
+              {link.dropdown ? (
+                <>
+                  <button
+                    onClick={(e) => toggleDropdown(index, e)}
+                    className="flex items-center gap-1 text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
+                  >
+                    {link.name}
+                    <HiChevronDown className={`transition-transform duration-200 ${activeDropdown === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {/* Dropdown Menu */}
+                  <div className={`absolute top-full left-0 mt-2 w-72 bg-white shadow-lg rounded-md py-2 transition-all duration-200 ${
+                    activeDropdown === index ? 'opacity-100 visible' : 'opacity-0 invisible'
+                  }`}>
+                    {link.dropdown.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        onClick={(e) => handleClick(e, item.external)}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                        className="block px-4 py-2 text-[#2d4b41] hover:bg-gray-100 hover:text-[#718979] transition-colors duration-200"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <a
+                  href={link.href}
+                  onClick={(e) => handleClick(e)}
+                  className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
+                </a>
+              )}
+            </div>
           ))}
-            <a
-              href={"https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link"}
-              target="_blank"
-              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
-            >
-         Brochure
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
-            </a>
-          <a href="https://forms.gle/jcUHXwXKafQp5ChS9" target="_blank" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-7 py-3 rounded-full transition-colors duration-200">
+          <a href="https://forms.gle/43eTPUHfqsr23o3n9" target="_blank" rel="noopener noreferrer" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-7 py-3 rounded-full transition-colors duration-200">
             Get Started
           </a>
         </div>
@@ -95,24 +199,50 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center py-6 space-y-5">
           {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              onClick={handleClick}
-              className="text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
-            >
-              {link.name}
-            </a>
+            <div key={index} className="w-full flex flex-col items-center">
+              {link.dropdown ? (
+                <>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveDropdown(activeDropdown === index ? null : index);
+                    }}
+                    className="flex items-center justify-center gap-1 text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
+                  >
+                    {link.name}
+                    <HiChevronDown className={`transition-transform duration-200 ${activeDropdown === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {/* Mobile Dropdown Menu */}
+                  <div className={`w-full flex flex-col items-center transition-all duration-200 overflow-hidden ${
+                    activeDropdown === index ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                  }`}>
+                    {link.dropdown.map((item, idx) => (
+                      <a
+                        key={idx}
+                        href={item.href}
+                        onClick={(e) => handleClick(e, item.external)}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                        className="py-2 text-[#2d4b41] hover:text-[#718979] transition-colors duration-200 text-base"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <a
+                  href={link.href}
+                  onClick={(e) => handleClick(e)}
+                  className="text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
+                >
+                  {link.name}
+                </a>
+              )}
+            </div>
           ))}
-           <a
-              href={"https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link"}
-              target="_blank"
-              className="relative group text-[#2d4b41] font-medium hover:text-[#718979] transition-colors duration-200 text-lg"
-            >
-         Brochure
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#718979] group-hover:w-full transition-all duration-300"></span>
-            </a>
-          <a href="https://forms.gle/jcUHXwXKafQp5ChS9" target="_blank" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-7 py-3 rounded-full transition-colors duration-200">
+          <a href="https://forms.gle/43eTPUHfqsr23o3n9" target="_blank" rel="noopener noreferrer" className="bg-[#2c4d42] hover:bg-[#718979] text-white font-semibold px-7 py-3 rounded-full transition-colors duration-200">
             Get Started
           </a>
         </div>

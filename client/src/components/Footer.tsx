@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 
             {/* Contact Button */}
             <a 
-              href="https://forms.gle/jcUHXwXKafQp5ChS9" 
+              href="https://forms.gle/43eTPUHfqsr23o3n9" 
               target='_blank'
               className="flex items-center space-x-1 bg-[#718979] hover:bg-[#5a6d5a] text-white px-2 py-1 rounded text-sm transition-colors"
             >
