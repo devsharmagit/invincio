@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
-import leaderimg from "../assets/mentor/leader.png";
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import leaderimg1 from "../assets/leader1.jpeg";
+import leaderimg2 from "../assets/leader2.jpeg";
+import leaderimg3 from "../assets/leader3.jpeg"
+import leaderimg4 from "../assets/leader4.jpeg"
+import leaderimg5 from "../assets/leader5.jpeg"
 
 const SecondSection = () => {
   const controls = useAnimation();
@@ -47,11 +51,31 @@ const SecondSection = () => {
           variants={containerVariants}
           className="flex flex-col items-center text-center"
         >
-          <motion.div variants={itemVariants} className="mb-12">
+          <motion.div variants={itemVariants} className="mb-12 flex items-center justify-center gap-4">
             <img
-              src={leaderimg}
+              src={leaderimg1}
+              alt="Leader 1"
+              className="w-60 h-60 rounded-lg object-cover shadow-lg"
+            />
+            <img
+              src={leaderimg2}
+              alt="Leader 2"
+              className="w-60 h-60 rounded-lg object-cover shadow-lg"
+            />
+            <img
+              src={leaderimg4}
               alt="Lt Col Ankur Sabharwal"
-              className="w-full h-full max-w-96 rounded-lg object-cover mx-auto shadow-lg"
+              className="w-full h-full max-w-96 rounded-lg object-cover shadow-lg"
+            />
+            <img
+              src={leaderimg3}
+              alt="Leader 3"
+              className="w-60 h-60 rounded-lg object-cover shadow-lg"
+            />
+            <img
+              src={leaderimg5}
+              alt="Leader 4"
+              className="w-60 h-60 rounded-lg object-cover shadow-lg"
             />
           </motion.div>
 

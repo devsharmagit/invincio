@@ -4,8 +4,8 @@ import { Autoplay } from 'swiper/modules';
 import hero1 from "../assets/projects/katurpula/katurpula5.webp";
 import hero2 from "../assets/herosection/hero1.webp";
 import hero3 from "../assets/projects/pune/pune-project-4.jpg";
-import hero4 from "../assets/projects/pune/pune-project-3.jpg";
-import hero5 from "../assets/projects/pune/pune-project.jpg";
+import hero4 from "../assets/herosection/bgimage1.jpeg";
+import hero5 from "../assets/herosection/bgimage2.jpeg";
 
 const Tagline = () => {
   const images = [hero1, hero2, hero3, hero4, hero5];

@@ -2,8 +2,9 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import { FaChartLine, FaUserTie, FaRoad, FaChartBar, FaLaptop, FaBriefcase, FaTrophy, FaUsers, FaGlobe, FaBrain, FaHandshake, FaHeart, FaMapMarkedAlt, FaGraduationCap, FaBuilding, FaUserCheck, FaFemale, FaLanguage } from 'react-icons/fa'
-import offlineClasses from "../assets/projects/pune/pune-project-3.jpg";
-import onlineClasses from "../assets/onlineClasses.jpg"
+import offlineClasses from "../assets/offlineclasses.jpeg";
+import onlineClasses from "../assets/onlineClasses.jpeg";
+import cooperateTraining from "../assets/cooperateTraining2.jpeg"
 
 
 interface Pedagogy {
@@ -272,7 +273,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         {service.title === "SSB INTERVIEW TRAINING" && (
             <div className="mb-8 mt-12">
               <p className="text-3xl font-bold text-[#2d4b41] mb-8 text-center">We provide offline and online classes</p>
-              <div className="flex flex-col md:flex-row justify-center gap-8">
+              <div className="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
                 <div className="h-60 w-full max-w-[450px] object-center object-cover rounded-lg overflow-hidden mx-auto text-center">
                   <img src={offlineClasses} alt="Offline Classes" className="w-full h-full object-cover" />
                 </div>
@@ -283,16 +284,67 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             </div>
           )}
 
-        <div className="mt-12 text-center">
-          {service.title === "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)" && 
-           <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSe-Oo1icYKLPNlitYoHo9B_BRyZzkLHHv4lcpirn-_WUqwIaw/viewform?usp=sharing' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
-           {service.cta}
-         </a>
-          }
-          <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
-            {service.cta}
-          </a>
-        </div>
+        {service.title === "CORPORATE TRAINING" && (
+            <div className="mb-8 mt-12 max-w-[600px] text-center mx-auto">
+                  <img src={cooperateTraining} alt="Offline Classes" className="w-full h-full object-cover mx-auto" />          
+            </div>
+          )}
+
+<div className="mt-12 text-center flex flex-col md:flex-row justify-center gap-4">
+  {service.title === "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)" &&
+  <>
+    <a target='_blank' href='https://docs.google.com/forms/d/e/1FAIpQLSe-Oo1icYKLPNlitYoHo9B_BRyZzkLHHv4lcpirn-_WUqwIaw/viewform?usp=sharing' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+      {service.cta} 
+    </a>
+    <a target='_blank' href='https://drive.google.com/file/d/1ic_QAFSRMTn_AFciwLX2nJzj1HVRJKK2/view?usp=drive_link' className="border-2 border-[#2d4b41] text-[#2d4b41] px-12 py-4 rounded-lg hover:bg-[#eaf0ed] transition-colors duration-300 text-xl font-bold flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Brochure
+    </a>
+  </>
+  }
+  {
+    service.title === "SSB INTERVIEW TRAINING" && <>
+      <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+        {service.cta}
+      </a>
+      <a target='_blank' href='https://drive.google.com/file/d/1HwRt-B-tapGd0QBBSPSqQhzfWMCRUs4v/view?usp=drive_link' className="border-2 border-[#2d4b41] text-[#2d4b41] px-12 py-4 rounded-lg hover:bg-[#eaf0ed] transition-colors duration-300 text-xl font-bold flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Brochure
+      </a>
+    </>
+  }
+   {
+    service.title === "SKILL DEVELOPMENT PROJECTS" && <>
+      <a target='_blank' href='https://forms.gle/jcUHXwXKafQp5ChS9' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+        {service.cta}
+      </a>
+      <a target='_blank' href='https://drive.google.com/file/d/1HwRt-B-tapGd0QBBSPSqQhzfWMCRUs4v/view?usp=drive_link' className="border-2 border-[#2d4b41] text-[#2d4b41] px-12 py-4 rounded-lg hover:bg-[#eaf0ed] transition-colors duration-300 text-xl font-bold flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Brochure
+      </a>
+    </>
+  }
+  {
+    service.title === "CORPORATE TRAINING" && <>
+      <a target='_blank' href=' https://forms.gle/Y8U7w8xQMWR126eYA' className="bg-[#2d4b41] text-white px-12 py-4 rounded-lg hover:bg-[#1e3a2f] transition-colors duration-300 text-xl font-bold">
+        {service.cta} 
+      </a>
+      <a target='_blank' href='https://drive.google.com/drive/folders/1OjD5tquiaCtNUFyCcoWUR0qJEM0JdU--?usp=drive_link' className="border-2 border-[#2d4b41] text-[#2d4b41] px-12 py-4 rounded-lg hover:bg-[#eaf0ed] transition-colors duration-300 text-xl font-bold flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Brochure - Online Training
+      </a>
+    </>
+  }
+</div>
+
       </div>
     </div>
   );
