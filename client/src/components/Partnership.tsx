@@ -4,17 +4,17 @@ import React from 'react'
 
 const Partnership = () => {
   return (
-    <section className="py-16 bg-[#fff]">
+    <section className="py-16 bg-white/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
             OUR PARTNERSHIPS
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-8"></div>
 
           {/* Disha Kiran Partnership */}
-          <div className="mb-16">
-            <p className="text-gray-700 max-w-3xl mx-auto mb-12">
+          <div className="mb-16"> 
+            <p className="text-xl font-semibold text-gray-700 max-w-3xl mx-auto mb-12">
               Disha Kiran's NEP 2020-compliant assessments, which are
               scientifically accredited to ensure a high degree of accuracy, reliability,
               and validity. These assessments, tailored to the Indian context by a
@@ -26,14 +26,14 @@ const Partnership = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
               <div>
-              <h3 className="text-xl font-semibold text-[#2d4b41] mb-2 text-center">
+              <h3 className="text-2xl font-semibold text-[#2d4b41] mb-2 text-center">
                 INVINCIO SERVICES LLP X DISHA KIRAN
               </h3>
               <img src={partnership1} alt="Disha Kiran Partnership" className="w-full rounded-lg shadow-lg" />
               </div>
               <div className="flex flex-col justify-center space-y-4 text-left">
                 <h3 className="text-2xl font-semibold text-[#2d4b41] mb-4">Key Features</h3>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-3 text-xl font-semibold text-gray-700">
                   <li className="flex items-center">
                     <span className="mr-2">▷</span>
                     Seamless Offline-Online Integration
@@ -58,7 +58,7 @@ const Partnership = () => {
               </div>
             </div>
             
-            <p className="text-gray-700 max-w-3xl mx-auto italic">
+            <p className="text-xl font-semibold text-gray-700 max-w-3xl mx-auto italic">
               This partnership redefines training and assessment by leveraging
               the strengths of both platforms to deliver unparalleled value!
             </p>
@@ -66,7 +66,7 @@ const Partnership = () => {
 
           {/* Podcast Section */}
           <div className="bg-[#eaeeed] rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-semibold text-[#2d4b41] mb-6">Featured Podcast</h3>
+            <h3 className="text-3xl font-bold text-[#2d4b41] mb-6">Featured Podcast</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div className="aspect-w-9 aspect-h-16">
                 <img 
@@ -76,8 +76,8 @@ const Partnership = () => {
                 />
               </div>
               <div className="text-left">
-                <h4 className="text-xl font-semibold mb-4">Infinite Talk Collaboration</h4>
-                <p className="text-gray-700 mb-6">
+                <h4 className="text-2xl font-semibold mb-4">Infinite Talk Collaboration</h4>
+                <p className="text-xl font-semibold text-gray-700 mb-6">
                   Join us in our engaging discussion on the Infinite Talk podcast where we explore
                   innovative approaches to education and skill development.
                 </p>

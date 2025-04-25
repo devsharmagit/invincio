@@ -131,10 +131,10 @@ sustainability-driven growth. `,
 
 const MentorsSection: React.FC = () => {
   return (
-    <section className="py-16 bg-[#fff]">
+    <section className="py-16 bg-white/90">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
             MEET OUR LEADER
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
@@ -190,7 +190,7 @@ const MentorsSection: React.FC = () => {
         </div>
 
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
             MEET OUR TEAM
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
@@ -240,7 +240,7 @@ const MentorsSection: React.FC = () => {
        
 
         <div className="text-center mb-12 mt-32">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
           OUR MENTORS
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>

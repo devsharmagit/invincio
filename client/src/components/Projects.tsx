@@ -40,10 +40,10 @@ const Projects = () => {
   ]
 
   return (
-    <section className="py-16 bg-[#eaeeed]" id="projects">
+    <section className="py-16 bg-[#eaeeed]/90" id="projects">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2d4b41] mb-4">
             Our Projects
           </h2>
           <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>

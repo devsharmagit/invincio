@@ -21,7 +21,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white shadow-md">
+    <div className="w-full bg-white/90 shadow-md">
       <div className="h-20 max-w-7xl mx-auto flex justify-between items-center px-4">
         <div className="flex items-center gap-3">
           <img src={logoSrc} alt="Logo" className="h-20 w-auto" />
