@@ -58,95 +58,170 @@ const SecondSection = () => {
           >
             {/* Mobile layout (single column with center image first) */}
             <div className="flex flex-col items-center gap-4 md:hidden">
-              <img
-                src={leaderimg4}
-                alt="Lt Col Ankur Sabharwal"
-                className="w-full max-w-sm rounded-lg object-cover shadow-lg"
-              />
+              <div>
+                <img
+                  src={leaderimg4}
+                  alt="Lt Col Ankur Sabharwal"
+                  className="w-full max-w-sm rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                  Lt Col Ankur Sabharwal
+                </p>
+              </div>
               <div className="grid grid-cols-2 gap-3">
-                <img
-                  src={leaderimg1}
-                  alt="Leader 1"
-                  className="w-full h-40 rounded-lg object-cover shadow-lg"
-                />
-                <img
-                  src={leaderimg2}
-                  alt="Leader 2"
-                  className="w-full h-40 rounded-lg object-cover shadow-lg"
-                />
-                <img
-                  src={leaderimg3}
-                  alt="Leader 3"
-                  className="w-full h-40 rounded-lg object-cover shadow-lg"
-                />
-                <img
-                  src={leaderimg5}
-                  alt="Leader 4"
-                  className="w-full h-40 rounded-lg object-cover shadow-lg"
-                />
+                <div>
+                  <img
+                    src={leaderimg1}
+                    alt="Leader 1"
+                    className="w-full h-40 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    MISSION MARKET DOMINANCE
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={leaderimg2}
+                    alt="Leader 2"
+                    className="w-full h-40 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    TRAINING NEEDS ASSESSMENT
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={leaderimg3}
+                    alt="Leader 3"
+                    className="w-full h-40 rounded-lg object-cover shadow-lg object-80"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    TRAINING THE TRAINER
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={leaderimg5}
+                    alt="Leader 4"
+                    className="w-full h-40 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    COOPERATE MEETING
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Tablet layout (central image with 2+2 layout) */}
             <div className="hidden md:flex lg:hidden flex-col items-center gap-4">
               <div className="flex gap-3 mb-3">
-                <img
-                  src={leaderimg1}
-                  alt="Leader 1"
-                  className="w-48 h-48 rounded-lg object-cover shadow-lg"
-                />
-                <img
-                  src={leaderimg2}
-                  alt="Leader 2"
-                  className="w-48 h-48 rounded-lg object-cover shadow-lg"
-                />
+                <div>
+                  <img
+                    src={leaderimg1}
+                    alt="Leader 1"
+                    className="w-48 h-48 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    MISSION MARKET DOMINANCE
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={leaderimg2}
+                    alt="Leader 2"
+                    className="w-48 h-48 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    TRAINING NEEDS ASSESSMENT
+                  </p>
+                </div>
               </div>
-              <img
-                src={leaderimg4}
-                alt="Lt Col Ankur Sabharwal"
-                className="w-full max-w-md rounded-lg object-cover shadow-lg"
-              />
+              <div>
+                <img
+                  src={leaderimg4}
+                  alt="Lt Col Ankur Sabharwal"
+                  className="w-full max-w-md rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                  Lt Col Ankur Sabharwal
+                </p>
+              </div>
               <div className="flex gap-3 mt-3">
-                <img
-                  src={leaderimg3}
-                  alt="Leader 3"
-                  className="w-48 h-48 rounded-lg object-cover shadow-lg"
-                />
-                <img
-                  src={leaderimg5}
-                  alt="Leader 4"
-                  className="w-48 h-48 rounded-lg object-cover shadow-lg"
-                />
+                <div>
+                  <img
+                    src={leaderimg3}
+                    alt="Leader 3"
+                    className="w-48 h-48 rounded-lg object-cover shadow-lg object-80"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    TRAINING THE TRAINER
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src={leaderimg5}
+                    alt="Leader 4"
+                    className="w-48 h-48 rounded-lg object-cover shadow-lg"
+                  />
+                  <p className="text-lg font-medium text-[#2d4b41] leading-relaxed">
+                    COOPERATE MEETING
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Desktop layout (horizontal with center image larger) */}
             <div className="hidden lg:flex items-center justify-center gap-4">
-              <img
-                src={leaderimg1}
-                alt="Leader 1"
-                className="w-60 h-60 rounded-lg object-cover shadow-lg"
-              />
-              <img
-                src={leaderimg2}
-                alt="Leader 2"
-                className="w-60 h-60 rounded-lg object-cover shadow-lg"
-              />
-              <img
-                src={leaderimg4}
-                alt="Lt Col Ankur Sabharwal"
-                className="w-72 rounded-lg object-cover shadow-lg"
-              />
-              <img
-                src={leaderimg3}
-                alt="Leader 3"
-                className="w-60 h-60 rounded-lg object-cover shadow-lg"
-              />
-              <img
-                src={leaderimg5}
-                alt="Leader 4"
-                className="w-60 h-60 rounded-lg object-cover shadow-lg"
-              />
+              <div className="flex flex-col items-center">
+                <img
+                  src={leaderimg1}
+                  alt="Leader 1"
+                  className="w-60 h-60 rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed mt-2">
+                  MISSION MARKET DOMINANCE
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={leaderimg2}
+                  alt="Leader 2"
+                  className="w-60 h-60 rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed mt-2">
+                  TRAINING NEEDS ASSESSMENT
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={leaderimg4}
+                  alt="Lt Col Ankur Sabharwal"
+                  className="w-72 rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed mt-2">
+                  Lt Col Ankur Sabharwal
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={leaderimg3}
+                  alt="Leader 3"
+                  className="w-60 h-60 rounded-lg object-cover shadow-lg object-80"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed mt-2">
+                  TRAINING THE TRAINER
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <img
+                  src={leaderimg5}
+                  alt="Leader 4"
+                  className="w-60 h-60 rounded-lg object-cover shadow-lg"
+                />
+                <p className="text-lg font-medium text-[#2d4b41] leading-relaxed mt-2">
+                  COOPERATE MEETING
+                </p>
+              </div>
             </div>
           </motion.div>
 

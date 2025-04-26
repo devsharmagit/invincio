@@ -5,6 +5,7 @@ import { FaChartLine, FaUserTie, FaRoad, FaChartBar, FaLaptop, FaBriefcase, FaTr
 import offlineClasses from "../assets/offlineclasses.jpeg";
 import onlineClasses from "../assets/onlineClasses.jpeg";
 import cooperateTraining from "../assets/cooperateTraining2.jpeg"
+import sunny from "../assets/mentor/sunny.png"
 
 
 interface Pedagogy {
@@ -289,6 +290,45 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
                   <img src={cooperateTraining} alt="Offline Classes" className="w-full h-full object-cover mx-auto" />          
             </div>
           )}
+
+          {service.title === "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)" && 
+      <>
+      <div className="text-center mb-12 mt-32">
+  <h2 className="text-3xl md:text-4xl font-bold text-[#2d4b41] mb-4">
+    Financial Literacy Training
+  </h2>
+  <div className="w-24 h-1 bg-[#718979] mx-auto mb-4"></div>
+</div>
+
+{/* Responsive container - column for mobile, row for tablet/desktop */}
+<div className="max-w-3xl mx-auto px-4 mb-5 flex flex-col md:flex-row gap-5 items-center">
+ 
+    {/* Image and name - full width on mobile, half width on tablet/desktop */}
+    <div className="w-full md:w-1/2 flex flex-col items-center gap-2 mb-4 md:mb-0">
+      <img src={sunny} alt="CA Sunny Sabharwal" className="w-full max-w-[200px] md:max-w-[300px] rounded-lg" />
+      <h2 className="text-xl font-bold text-[#2d4b41] mt-2">
+        CA Sunny Sabharwal
+      </h2>
+    </div>
+    
+    {/* Text content - full width on mobile, half width on tablet/desktop */}
+    <div className="w-full md:w-1/2">
+      <p className="text-gray-600 font-medium text-lg text-center md:text-left">
+        Chartered Accountant and Financial Literacy
+        Trainer with 18 years of experience in banking,
+        risk management, and financial consulting.
+        Conducted international training programs
+        across Asia, including the Philippines and Nepal.
+        Specializes in bridging theory with real-world
+        applications through interactive learning and
+        case studies. Passionate about equipping
+        professionals with financial acumen for better
+        decision-making and long-term success.
+      </p>
+    </div>
+  </div>
+      </>
+          }
 
 <div className="mt-12 text-center flex flex-col md:flex-row justify-center gap-4">
   {service.title === "PERSONALITY PROFILING & CAREER GUIDANCE (SCHOOLS)" &&
